@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+    overflow: hidden; /* Permet de cacher les infos sur l'axe X */
+}
+*, ::before ::after{                 /* Fait appel au pseudo éléments*/
+    box-sizing: border-box;         /* Permet d'enlever les marges */
+    -webkit-box-sizing: border-box; /* lecture du navigateur opéra // Fait appel en fonction de la box*/
+    -moz-box-sizing: border-box;    /* lecture du navigateur mozilla */
+}
+header{
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+}                                           
+.banner{
+    background-color: orange;
+    width: 100%;
+    padding: 10px 0;  
+}
+
+.banner .section-right{
+    float: right;
+    
+}
+.banner a {
+    margin: 0 10px;
+    color: black;
+}
