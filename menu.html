@@ -1,27 +1,53 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">    
+
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<header>
-    <div class="banner">
-        <span class="section-left">          
-            <a href="#">chanitebrandon@gmail.com</a>
-            <a href="#">+33603953240</a>
-        </span>
-        <span class="section-right">
-            <a href="#">F</a>
-            <a href="#">I</a>
-            <a href="#">T</a>
-        </span>
-        
-    </div>
-</header>
-    
-<script src="main.js"></script>    
+    <header>
+        <div class="banner">
+            <span class="section-left">
+                <a href="#">chanitebrandon@gmail.com</a>
+                <a href="#">+33603953240</a>
+            </span>
+            <span class="section-right">
+                <a href="#">F</a>
+                <a href="#">I</a>
+                <a href="#">T</a>
+            </span>
+        </div>
+        <div class="logo parallelogram">
+            <span class="skew-fixe">
+                <img src="./images/navbar.png" alt="marque">
+            </span>
+        </div>
+        <div class="topnav" id="myTopnav">
+            <a href="#" class="active">Home</a>
+            <a href="#">Galerie</a>
+            <div class="dropdown">
+                <button class="dropdownbtn">Services</button>
+                <div class="dropdown-content animate">
+                    <a href="#">Design</a>
+                    <a href="#">Développement</a>
+                    <a href="#">Back-end</a>
+                </div>
+            </div>
+            <a href="#">Contact</a>
+            <a href="#">About</a>
+            <a href="#" style="float:right">U</a>
+            <a href="javascript:void(0)" style="font-size:15px" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+
+
+    </header>
+
+    <script src="main.js"></script>
 </body>
+
 </html>

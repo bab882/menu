@@ -27,3 +27,200 @@ header{
     margin: 0 10px;
     color: black;
 }
+.logo{
+    background-color: orange;
+    color: black;
+    padding: 25px;
+    position: absolute;            /* Pour qu'il reste collé au bloc du dessus*/
+    width: 230px;
+    left: -25px;
+    top: 30px;
+}
+.parallelogram{             /* On va transformer le bloc */
+    transform: skew(-20deg);
+}
+.skew-fixe{
+    width: 60%;
+    display: inline-block;      /* Pour modifier uniquement l'oriantation du log */
+    transform: skew(20deg);
+}
+.logo img{
+    width: 180px;
+    height: 25px;
+}
+.topnav{
+    background-color: black;
+    overflow: hidden;
+}
+.topnav a {
+    display: block;
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.topnav .icon{
+    display: none;
+    outline: none !important;
+}
+.active{
+    color: orange;
+    margin-left: 250px;
+}
+.dropdown{
+    float: left;
+    overflow: hidden;     /* Pour cacher mon dropdown */
+}
+.dropdown .dropdownbtn{
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 14px 16px;
+    background-color: inherit; /* Je vais reprendre la couleur de la nav */
+    margin: 0;
+}
+/* Je vais regrouper mon design dev et back end dans le services */
+.dropdown-content{
+    overflow: hidden;
+    display: none;
+    position: absolute;
+    background-color: #f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);                       /* un effet d'ombre */
+    border-top: 2px solid orange;
+    z-index: 1;           /* qui permet d'etre au dessus de la position relative */
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 1s;
+    animation-name: slideIn;
+    animation-duration: 1s;
+}   
+.dropdown-content a {
+    float: none;
+    color: #000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.topnav a:hover, .dropdown:hover .dropdownbtn{
+    color: orange;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+/* Gestion des animations*/
+@-webkit-keyframes slideIn {
+    from {
+        bottom: -300px;
+        opacity: 0;
+    }
+    to {
+        bottom: -140px;
+        opacity: 1;
+    }
+}
+@-keyframes slideIn {
+    from {
+        bottom: -300px;
+        opacity: 0;
+    }
+    to {
+        bottom: -140px;
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.animate{
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s;
+}
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0);
+    }
+    to {
+        -webkit-transform: scale(1);
+    }
+}
+@keyframes  animatezoom {
+    from {
+        -webkit-transform: scale(0);
+    }
+    to {
+        -webkit-transform: scale(1); 
+    }
+}
+@media screen and (max-width: 820px){
+    .banner .section-left {
+        display: none;
+    }
+    .banner .section-right {
+        float: none;
+        width: 100%;
+    }
+    .topnav a, .dropdown .dropdownbtn {
+        display: none;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+    .dropdown-content{
+        -webkit-animation-name: none;
+        -webkit-animation-duration: 1s;
+        animation-name: none;
+        animation-duration: 1s;
+    }
+    .active {
+        margin-left: 0;
+    }
+    .topnav {
+        width: 100%;
+        height: 50px;
+        transition: 0.5s;
+    }
+    .topnav.responsive {
+       position: relative; 
+       height: 70vh;                    /* Vh c'est la taille de l'écran */
+       overflow-y: auto;
+    }
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .topnav.responsive .dropdown {
+        float: none;
+    }
+    .topnav.responsive .dropdown-content {
+        position: relative;
+    }
+    .topnav.responsive .dropdown  .dropdownbtn{
+       display: block;
+       width: 100%;
+       text-align: left;
+    }
+}
